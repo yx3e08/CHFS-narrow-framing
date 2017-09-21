@@ -1,0 +1,775 @@
+% !TeX spellcheck = <none>
+\documentclass[ukenglish,nottitlepage,thmsb,11pt,letterpaper]{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{endnotes}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage[round]{natbib}
+%\usepackage{titling}
+
+%below work for Excel2Tex and table control
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{array}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+\setcounter{MaxMatrixCols}{10}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{example}{Example}
+\newtheorem{proof}{proof}
+\newtheorem{proposition}{proposition}
+\newtheorem{corollary}{Corollary}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\evensidemargin}{0.5cm}
+\setlength{\topmargin}{0cm}
+%\setlength{\textheight}{23cm}
+\renewcommand{\baselinestretch}{2}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%\input{tcilatex}
+\geometry{left=2.14cm,right=2.14cm,top=2.54cm,bottom=2.54cm}
+\usepackage[flushleft]{threeparttable}
+
+\begin{document}
+\title{\Large \bf Narrow framing and household portfolio choices\footnotemark[1]}
+\date{}
+\author{
+	Yuxin, Xie\footnotemark[2],
+	Fan, Zhang\footnotemark[3]  \  and
+	 Xiaomeng Lu\footnotemark[4]
+      }
+
+\begin{minipage}[h]{\textwidth}
+\maketitle
+\begin{center}
+\textbf{Abstract}
+\end{center}
+
+\begin{spacing}{2}
+By collaborating a representative survey data derived from China Household Finance Survey (CHFS), we estimate the degree of narrow framing using a quantitative approach. Based on obtained results, we further investigate if the variation of narrow framing can be attributed to a bunch of personal traits. As theory predicts that households who exhibit lower degree of narrow framing should hold better-diversified portfolio, our results support this conjecture. Most importantly, we argue that narrow framing is an irreplaceable ingredient to understand households' portfolio choices, even after controlling other behavioural  preferences, such as loss aversion and ambiguity aversion. Finally, we corroborate that \\
+\end{spacing}
+JEL Classification: G11; G12; G15\\
+\textbf{Keywords}: narrow framing; portfolio choice; household finance; stock market participation; portfolio under-diversification; loss aversion\\
+
+\end{minipage}
+
+\footnotetext[1]{The authors would like to acknowledge also the gracious supports of this work through the Survey and Research Center for China Household Finance (CHFS), Southwestern University of Finance and Economics, and the National Research Foundation of Chinese Grant funded by the Chinese Government (Project ID: 221610004005040022). We would like to thank participants at the Southwestern Finance Association, World Finance Conference, and Korean Securities Association conferences, and at University of Liverpool, University of Glasgow, Sungkyunkwan University, as well as Andros Gregoriou, Chris Florackis, Vasileios Kallinterakis, Chulwoo Han, Bahattin Buyuksahin, Wilko Bolt, Micaela Pagel, Gulser Meric, Eric Cardella, Daniel Folkinshteyn, and Minseong Kim for helpful comments. Remaining errors are ours.}
+
+\footnotetext[2]{The School of Securities and Futures, Southwestern University of Finance and Economics, China, Tel: +86 15882373079, Email: yuxinxie@swufe.edu.cn}
+\footnotetext[3]{The School of Securities and Futures, Southwestern University of Finance and Economics, China, Tel: +86 13980669106, Email: zfan@swufe.edu.cn}
+\footnotetext[4]{China Household Finance Survey (CHFS), Southwestern University of Finance and Economics, China, Tel: +86 18010560935, Email: luxiaomeng@swufe.edu.cn}
+
+\thispagestyle{empty}
+\clearpage
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+\pagenumbering{arabic}
+%\begin{spacing}{2}
+\section{Introduction}
+
+Most canonical models of portfolio choice suggest that bearing idiosyncratic risk will not be compensated since investors can significantly mitigate it through portfolio diversification \citep{Markowitz1952}. The extent to which this prediction holds true is prerequisite to all modern asset pricing theories. However, do households actually hold well-diversified portfolios? There is ample empirical  evidence indicating that typical household fail to do so: for more than three decades now the US retail investors has been found holding a much smaller fraction of the optimal portfolio size \citep{Blume1975,Goetzmann2008,Dimmock2016}. Similar failures of stock diversification is also well-observed among many other countries, such as Germany, Sweden, Turkey \citep{Dorn2009,Anderson2013,Fuertes2014}. By collaborating the China Household Finance Survey 2015, which was jointly conducted by the People's Bank of China and the Southwestern University of Finance and Economics, our data show consistent results as found in developed markets: Chinese households also hold under-diversified stock portfolios. The average size of their portfolios is 3.2, conditional on stock participation, which is far fewer than the ideal range 30-40 \citep{Statman1987}.
+
+How can we make sense of above discrepancies? Diversification should be widely applied since it is the most naive, and almost costless method of risk reduction. Given the growing number of opposite evidence, current literature recognizes that there must be some other roots preventing household diversifying well. In line with previous studies \citep{Guiso2002,Campbell2006,Goetzmann2008,Kumar2008,Rooij2011,Gaudecker2015}, both demographics (e.g., age, schooling, financial literacy, gender, martial status, number of children) and economic attributes (e.g., total family income, wealth, values in stocks and financial assets, respectively) are believed as close determinates to households' portfolio choices. On the other side, a number of recent behavioural studies suggest that the failure to diverse can be linked to psychological traits, such as overconfidence \citep{Gaudecker2015,Fuertes2014} and ambiguity aversion \citep{Dimmock2016}.
+
+It has been argued recently that a psychological tendency, called ``narrow framing" may play a more important role in the way how people evaluate financial risk than previously realized. In traditional models, an agent is supposed to evaluate new risk by merging it with pre-existing risk and checking if the combination is attractive. In contrast, existing evidence from psychological research \citep[e.g.,][]{Barberis2006,Anagola2013,Beshears2016} suggest that people tend to evaluate new risk in isolation and therefore fail to realize the benefits of diversifications. As a result, by narrowly framing their investment options, the agent could very well turn down investments that improve their risk-return tradeoff\footnote{The notion of narrow framing is also applicable when making decisions over a inter-temporal problem, where people's perceptions of gains and losses are influenced by varying evaluation periods \citep{Thaler1997,Benartzi1999,Gneezy2003}. Both types of narrow framing are crucial to understand why individuals are reluctant to accept independent gambles with a positive expected return. However, the focus in this paper falls in the domain of asset allocation, we therefore restrict the scope of narrow framing within a cross-sectional context.}.
+
+If narrow framing do arise endogenously in the way people evaluate risk, it is important that we learn more about its causes and impact to portfolio decisions. To our knowledge, this paper is the first to directly investigate the determinants of narrow framing, and one of its related investment behaviour anomalies: stock under-diversification\footnote{Based on the data of a group individual investors at a large U.S. discount brokerage house, \citet{Kumar2008} find that narrow framing could help to explain the disposition effect and portfolio under-diversification. However, in their study, the key parameter --- degree of narrow framing is not a direct measure but an ad hoc proxy (trade clustering).}. We contribute the literature in three aspects: first, since narrow framing is not directly observable, we provide a direct measurement of narrow framing using the specification of \citet{Barberis2006} and \citet{Barberis2009} that embed recursive utility into a consumption-based asset pricing model\citep{Epstein1989,Epstein1991}. Thanks to the richness of CHFS dataset,\textbf{ our estimates account a significant} heterogeneity in risk preferences among individual households. Second, we find strong evidence that the degree of narrow framing is negatively associated with stock diversification, the results are robust even after controlling a set of demographics and behavioural preferences that might jointly affect household portfolio choices. Last, departing from the previous literature, we assess the empirical validity of a few hypotheses around the issue of how individual attributes affect the degree of narrow framing. In general, our results are consistent to \citet{Kahneman2003} that intuitive thinking is most likely a primary origin to narrow framing, and therefore, leads to a lower willingness of engaging financial risks. In summary, our results strength the knowledge of narrow framing, which is critical for devising more powerful approaches in understanding why households are badly motivated to go well-diversified and perhaps, other related anomalies, such as equity premium puzzle.
+
+The remainder of the paper is structured as follows. Section 2 provides more details about the CHFS dataset and key statistics.  Section 3 gives necessary details about the adopted model to derive the degree of narrow framing.  Section 4  discusses potential determinates of narrow framing and Section 5 presents our main results. Section 6 provides related interpretations. Finally, Section 7 concludes the paper.
+\section{Data and variables}
+
+Most of experimental work on assessing narrow framing relies on individual's choice data collected from a series of laboratory sessions. However, in a typical investment environment, decisions are often made based on longer time horizons, correlated return distributions, less smooth information flow and a much higher level of anxiety. The measure of framing effects based on a lab setting is therefore often misleading \citep{Beshears2016}. To overcome this problem, we use data from the China Household Finance Survey (CHFS) which is conducted once every two-year since its lunched day in 2011. The CHFS is the first Chinese nationwide household survey covering micro-information about demographic and economic characteristics and focusing on wealth and asset allocations. Its richness of CHFS makes it very capable for locating proxy of desired household's behavioural preferences. A stratiﬁed three-stage probability proportion-to-size
+random sampling was adopted to ensure the respondents are representative of all the residences in China. As of the 2015 wave, it contains data from 25 provinces and more than 38,000 households. 
+
+There are four points make CHFS an ideal data set. First, it covers a representative sample of the entire population, particularly a uniform sampling among age, wealth and region due to a delicate design. Second, CHFS provides a detailed asset composition along with a few questions assessing respondents' risk attitudes. Third, enormous monies and efforts has been invested to ensure that all data are obtained as accurate as possible\footnote{For example, to avoid casual responses, all data were collected via face to face interviews at respondents' home or other locations they appointed. In addition to a written questionnaire, the whole conversation is backed up by voice recording equipments for further quality controls. All interviewers are under (post) graduate students from economics \& finance disciplines. Extensive trainings including interviewing skills, data handling and mock interviews has to be taken before they go into the field. Local community councils are highly involved and provide massive support for those households who are less willing to participate. A refusal will only be recorded after six attempts from different interviewers.}. Finally, CHFS tracks a large portion of households over time. This is very important for one who want to examine households through time to see how their portfolio choices evolve. For more detailed description about data collection procedures, see \citet{Gan2013}.
+
+
+The dataset includes information of each family member. Family Size takes values from 1 to 18, resulting 37289 families observations and 140966 individual observations in total. The survey always pick the respondent who possesses the best knowledge/education level of the family. Among them, only about 6.26\% of the households reported stock market participation. This reduces the sample of households to 2335 out of 37289. Moreover, a few adjustments are made to the raw data before we conduct the regression analysis: First, it is true that smaller portfolios are less diversified due to transaction costs \citep{Vissing-Jorgensen2002,Vissing-Jorgensen2003,Goetzmann2008}.  In order to mitigate the wealth effect, households for those either net wealth is less than 100,000 RMB or net stock value is 10,000 RMB are excluded. Besides, respondents occasionally reported that they hold extreme large number of individual stocks. According to our records, 9 households hold more than 100 different individual stocks and the peak value is 3000. Since the marginal benefit of diversification shrink dramatically once the portfolio size go beyond 10 \citep{Evans1968}, in these extreme cases, diversification is unlikely to be a main drive. Therefore, to limit the impact of outliers, we drop households if the number of their stocks exceed 30. Finally, we also prohibit the use of leverage and short selling, as these derivatives may confound the true nexus between narrow framing and portfolio decisions. To this end, the final sample size we put into regressions is 2150.
+
+Table 1 defines all applied variables in our study. Table 2 provides summary statistics of the applied sample.The last column of Table 2 reports the number of valid responses for each variable. 
+
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet2'
+\begin{spacing}{1}
+\begin{table}[H]
+	\renewcommand\arraystretch{1.65}% spacing control inside the table
+	\centering
+	\caption{Definition of Key variables}
+	\small
+	\begin{tabular}{L{4.25cm}L{12.25cm}}
+		\toprule
+		Variable Name   & Definition \\
+		\midrule
+		age       & Age in years \\
+		male      & Indicator for male,  = 1 if male, = 0 if female  \\
+		
+		married   & Indicator if respondent is married or has a     partner  \\
+		number of children     & Number of living children under 16 old years\\
+		primary school diploma & Indicator if respondent completed primary school only \\
+		high school diploma     & Indicator if respondent completed high school but not college \\
+		graduate school diploma & Indicator if respondent completed a bachelor degree or above \\
+		employed                & Indicator if respondent is employed \\
+		employed-financial-job  & Indicator if at least one family member works in the financial industry \\
+		family income           & Total income for all household members older than 16, including from jobs, business, farm, investment, and other income \\
+		net wealth   &   Household wealth calculated as the total household assets in land and real estate, vehicles, luxuries, durable assets and financial assets but minus household total debts \\
+		financial wealth  & The sum of cash, deposit, stocks, bonds, funds, financial management products, derivatives, gold for investment, overseas assets, others  \\
+		financial literacy  & Factor analysis, based on the answers of financial literacy questions \\
+		trust   & Self-reported the score of whether the information disclosed by listed companies is credible, ranging from 1 ("very credible") to 5 ("very uncredible") \\
+		ambiguity aversion  & Dummy indicator that respondent hold commercial insurance in addition to national issuance, =1 if hold, = 0 if not hold \\
+		asset diversity   & The number of family investment in financial assets, range from 0 to 8; including time deposits, stocks, bonds, funds, financial management products, derivatives, gold for investment, overseas assets  \\
+		herding   & Self-reported tendency how well you will be affected by others, ranging from 1 ("strongest") to 5 ("mildest") \\
+		loss aversion  & Estimated coefficient of loss aversion based on lottery questions, = 3 if strongest loss aversion, = 2 if modest loss aversion  \\
+		risk aversion   & Ranges from 1 to 5; 1 corresponds to the mildest risk-averse" and 5 corresponds to the strongest risk-averse \\
+		having houses    &  Dummy indicator that the family has houses  \\
+		stock wealth     &  The value of stock assets minus stocks debt \\
+		investment experience  &   How long has it been for this family to invest in stocks from the first time \\
+		east    &Indicator if respondent lives in the eastern part of China \\
+		stock diversity  & the number of different stocks held in the investor’s portfolio  \\
+		\bottomrule
+	\end{tabular}%
+\end{table}%
+\end{spacing}
+
+\begin{spacing}{1}
+\begin{table}[H]
+	\renewcommand\arraystretch{1.5}% spacing control inside the table
+	\centering
+	\caption{Summary statistics for key variables } 
+	\small
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} cccccc}
+		\toprule
+		Variable name  & \multicolumn{1}{l}{Mean} & \multicolumn{1}{l}{Standard deviation} & \multicolumn{1}{l}{Minimum } & \multicolumn{1}{l}{Median} & \multicolumn{1}{l}{Maximum} & \multicolumn{1}{l}{N} \\
+		\midrule
+		age                     &53.24  &14.34  &3  &52  &101 &37281\\
+		male                    &0.76   &0.43   &0  &1   &1   &37289 \\
+		married                 &0.78   &0.41   &0  &1   &1   &37289 \\
+		number of children      &0.51   &0.77   &0  &0   &10  &37289 \\
+		primary school diploma  &0.64   &0.48   &0  &1   &1   &37237 \\
+		high school diploma     &0.20   &0.40   &0  &0   &1   &37237 \\
+		graduate school degree  &0.16   &0.37   &0  &0   &1   &37237 \\
+		employed                &0.65   &0.48   &0  &1   &1   &37289 \\
+		employed-financial-job  &0.02   &0.15   &0  &0   &1   &37289 \\
+		family income(Thousand) &74.52  &108.82  &0.02  &47.04  &973 &35983 \\
+		wealth(Thousand)        &788.65 &1329.66 &0.93  &335.15 &10110.55 &36487 \\
+		financial wealth(Thousand) &102.00 &258.61 &0.03 &16 &2280 &36371 \\
+		financial literacy      &0.003 &1.04 &-1.33 &-0.22 &1.72 &37288 \\
+		trust                   &3.72 &0.90 &1       &4      &5      &3486  \\
+		ambiguity aversion      &0.09 &0.28 &0       &0      &1      &37289 \\
+		asset diversity         &1.38 &0.68 &1       &1      &6      &10722 \\
+		herding                 &3.31 &1.19 &1       &3      &5      &2588 \\
+		loss aversion           &1.24 &0.43 &1       &1      &2      &34179\\
+		risk aversion           &4.07 &1.17 &1       &5      &5      &37483 \\
+		having houses           &0.92 &0.28 &0       &1      &1      &37289\\
+		stock wealth(Thousand)  &214.34 &546.28 &0.07   &60 &5025    &3735 \\
+		investment experience   &9.65   &7.18   &1   &8   &25        &2562 \\
+		east                    &0.50   &0.50   &0   &0  &1          &37289 \\
+		stock diversity         &3.24   &2.93   &1   &3  &30  &2617 \\
+		\bottomrule
+		
+	\end{tabular*}%
+\end{table}%
+\end{spacing}
+
+\section{Assessing the degree of narrow framing}
+\subsection{The model}
+While narrow framing is referred as a plausible ingredient in people's risk preferences, rigorous approaches that allow further tests and applications of narrow framing is equally important. In an attempt to formalizing narrow framing into a tractable preference specification, a series of papers \citep[e.g.,][]{Barberis2001,Barberis2006,Barberis2009} develop a formal framework (BH hereafter) to examine quantitatively, how stock holdings can carry lower weights if stock returns are not fully merged with other risk components. In this paper, we estimate the degree of narrow framing based on BH model for its two main merits: first, one could argue that in addition to stocks the investor may also frame other assets narrowly, such as real estate or bonds. BH model can easily accommodate this by allocating multiple narrow framing coefficients while keeping tractability with each desired asset. Second, BH model can estimate the degree of narrow framing in the presence of risk aversion and loss aversion, enabling a great deal of heterogeneity for estimated narrow framing among households\footnote{Although BH model was originally designed for analyzing a homogeneous agent model, as argued in \citet{Barberis2009}, given the aggregate stock market does not have a close substitute, if narrow framing affects the equity premium in a homogeneous agent model, it is likely to also affect the equity premium in a heterogeneous agent model. Therefore, the prediction of the homogeneous agent model is likely to be qualitatively similar to the prediction of the heterogeneous agent model, which would be more than enough for our association analysis.}.
+
+Formally, at time $t$, the agent chooses a consumption level $c_{t}$ and allocates the reminders of his wealth, $W_t - c_t$ across $n$ assets including a risk-free asset. His wealth therefore evolves according to
+\begin{equation}
+\widetilde{W}_{t+1} = (W_t-c_t)\left( \sum_{i=1}^{n} \theta_{i,t} \widetilde{R}_{i,t+1}  \right),
+\end{equation}
+where $\theta_{i,t}$ is the proportion of post-consumption wealth invested to asset $i$, earning a gross return $\widetilde{R}_{i, t+1}$ between time $t$ and $t+1$.  The agent solves a decision problem that how much he wants to consume today and invests the reminders to risky assets. Since his actions today can affect the evolution of opportunities in the future, summarizing the future consequences of these actions reduce the dynamic decision problem to a two-period problem. Based on \citet{Barberis2006} and \citet{Barberis2009}, narrow framing can be introduced by the form:
+\begin{equation}
+V_t = H \left( C_t, \mu(\widetilde{V}_{t+1}\vert{I_t}) + b_0 \sum_{i = m+1}^{n}E_t ( u(\widetilde{G}_{i,t+1}) ) \right),i
+\end{equation}
+where $\mu(\widetilde{V}_{t+1}\vert{I_t})$ is the certainty equivalent of the distribution of future utility $\widetilde{V}_{t+1}$ conditional on time $t's$ information $I_t$. $b_0$ is a non-negative constant controlling the degree of narrow framing and the aggregate function $H(\cdot)$ can be given as:
+\begin{equation}
+H(c,x) = \left( (1-\beta)c^\rho + \beta x^\rho \right)^ {(1/\rho)}, 0<\beta<1, 0\neq\rho<1.
+\end{equation}
+Suppose an agent frames $n-m$ of the $n$ assets narrowly, $u(\widetilde{G}_{i,t+1})$ is the direct utility the agent is taking from investing in asset $i$ specifically rather than implicitly via its contribution to entire portfolio. The potential outcome of investing in asset $i$ is:  \begin{equation}
+\widetilde{G}_{i,t+1} = (W_t - c_t) \theta_{i,t} \left( \widetilde{R}_{i,t+1}-\widetilde{R} \right),
+\end{equation}
+where $\widetilde{R}$ is the reference point to split gains and losses. We further assume that the agent compares all investment returns to a constant risk-free rate so that $\widetilde{R}\equiv R_f$. When making portfolio decisions, as argued by  \citet{Kahneman2003} and \citet{Barberis2009}, an intuitive thinker is subject to narrow framing should be also associated with loss aversion, which is a psychological tendency that losses loom larger than gains \citep{Tversky1979,Tversky1992}. Similarly, we let $\lambda >1$ to enable this feature in Eq.(5).
+
+\begin{equation}
+u(x)=\left\{
+\begin{array}{c}
+x,\text{ if}\ x\geq 0 \\
+-\lambda (-x) ,\ \text{if }%
+x<0%
+\end{array}%
+\right..
+\end{equation}%
+
+\begin{equation}
+\mu(k \widetilde{x} )= k \mu (\widetilde{x}), \forall k>0.
+\end{equation}
+Denote $J_t$ as the optimal utility of Eq.(3), $i.e.,$ the agent's optimal utility at time $t$. The Bellman equation immediately yields:
+\begin{eqnarray*}
+J_t (W_t, I_t) &=& \underset{c_t, \theta_t}{\max} H\left( c_t, \mu \left(J_{t+1} (W_{t+1}, I_t) \vert I_t \right) +  b_0 \sum_{i = m+1}^{n}E_t ( u(\widetilde{G}_{i,t+1}) ) \right)
+\cr
+&=& \underset{c_t, \theta_t}{\max} \left[ (1-\beta) c_t^ \rho + \beta \left[ \mu  (J_{t+1} (W_{t+1}, I_t) \vert I_t ) +  b_0 \sum_{i = m+1}^{n}E_t ( u(\widetilde{G}_{i,t+1}) ) \right]^ \rho\right]^{1/\rho}.
+\end{eqnarray*}
+Suppose asset's returns are i.i.d., then $J_t (W_t, I_t)$ is independent of the future information at any time $t$. As a result, we must have
+\begin{equation}
+J(W_t,I_t) = A(I_t)W_t = A_t W_t,
+\end{equation}
+so that
+\begin{equation}
+A_t W_t =  \underset{c_t, \theta_t}{\max} \left[ (1-\beta) c_t^ \rho + \beta (W_t-c_t)^{\rho} \left[ \mu (A_{t+1} \theta' \widetilde{R}_{t+1} \vert I_t ) +  b_0 \sum_{i = m+1}^{n}E_t ( u(\theta_{i,t} (\widetilde{R}_{i,t+1} - R_f)) ) \right]^ \rho\right]^{1/\rho},
+\end{equation}
+where $\theta_t = (\theta_{1,t}, \dots, \theta_{n,t})'$ and $\widetilde{R}_t = (\widetilde{R}_{1,t}, \dots, \widetilde{R}_{n,t})'$.
+Eq.(14) shows that the consumption and portfolio choice are separable, defining
+\begin{equation*}
+\alpha_t = c_t / W_t.
+\end{equation*}
+The problem becomes
+\begin{equation}
+A_t = \underset{\alpha_t}{max} \left[ (1-\beta) \alpha_t ^{\rho}\ + \beta (1-\alpha_t)^\rho (B^*_{t})^\rho \right]^{1/\rho},
+\end{equation}
+where $B^*_{t}$ is the optimal utility of choosing $\theta_t ^*$
+\begin{equation}
+B^*_{t} = \underset {\theta_t}{\max} \left[ \mu (A_{t+1} \theta' \widetilde{R}_{t+1} \vert I_t ) +  b_0 \sum_{i = m+1}^{n}E_t ( u(\theta_{i,t} (\widetilde{R}_{i,t+1} - Rf) )) \right]
+\end{equation}
+the first-order condition for optimal consumption ratio $\alpha_t^*$ is
+\begin{equation}
+(1-\beta)(\alpha_{t} ^ {*})^{\rho-1} = \beta(1-\alpha_{t} ^ {*})^{\rho-1}(B^*_{t})^\rho
+\end{equation}
+combining Eqs (9) and (11) gives
+\begin{equation}
+A_t = (1-\beta)^{1/\rho}(\alpha_t^*)^{1-1/ \rho},
+\end{equation}
+and Eq. (12)can be extended similarly,
+\begin{equation}
+A_{t+1} = (1-\beta)^{1/\rho}(\alpha_{t+1} ^{*})^{1-1/ \rho}.
+\end{equation}
+substituted Eq. (13) into Eq. (10),
+\begin{equation}
+B^*_{t} = \underset {\theta_t}{\max} \left[ \mu  ((1-\beta)^{1/\rho}(\alpha_{t+1} ^{*})^{1-1/ \rho} \theta' \widetilde{R}_{t+1} \vert I_t ) +  b_0 \sum_{i = m+1}^{n}E_t ( u(\theta_{i,t} (\widetilde{R}_{i,t+1} - R_f) )) \right].
+\end{equation}
+The first-order condition is sufficient for a global optimum since Eq. (14) is strictly concave as a function of $\alpha_t$ as long as $B_t ^* >0$. Last, we give a simple form of $\mu(.)$
+\begin{equation}
+\mu(x) = (E (x^\xi) )^{1/\xi}, 0\neq \xi <1,
+\end{equation}
+When  $\epsilon = \rho = 1-\Gamma$, the necessary and sufficient first-order conditions for the decision problem that maximizes Eq. (11) for each $t$
+\begin{equation}
+\begin{aligned}
+(\frac{1-\alpha_t}{\alpha_t})^{-\Gamma/(1-\Gamma)} \left[ \beta ^{1/(1-\Gamma)} \left[ E_t (\alpha_{t+1}^{-\Gamma} (\theta'_t \widetilde{R}_{t+1})^{1-\Gamma})\right]^{1/(1-\Gamma)}  +b_0 (\frac{\beta}{1-\beta})^{1/(1-\Gamma)} \sum_{i = m+1}^{n}E_t ( u(\theta_{i,t} (\widetilde{R}_{i,t+1} - R_f) )) \right]\\
+= 1
+\end{aligned}
+\end{equation}
+
+\subsection{Numerical solutions of narrow framing}
+We use the preceding BH preferences to solve a portfolio problem in which an investor allocates his wealth across three assets: asset 1 is risk-free and earns a constant return of $R_f$. asset 2 and 3 are risky assets that have log-normal gross returns between time $t$ and $t+1$, $\widetilde{R}_{2,t+1}$ and  $\widetilde{R}_{3,t+1}$, respectively
+\begin{equation*}
+\log\widetilde{R}_{i,t+1} = g_i + \sigma_i \varepsilon_{i,t+1}
+\end{equation*}
+and
+\begin{equation}
+\left(
+\begin{array}{ccc}
+\widetilde{\varepsilon}_{2,t}\\
+\widetilde{\varepsilon}_{3,t}
+\end{array}
+\right)
+\sim N
+\left( \left(
+\begin{array}{ccc}
+0\\
+0\\
+\end{array}
+\right)
+,
+\left(
+\begin{array}{ccc}
+1 & \omega\\
+\omega & 1\\
+\end{array}
+\right)  \right) \ i.i.d \ \forall \  t
+\end{equation}
+The investor's wealth level is
+\begin{equation}
+W_{t+1} = (W_t -c_t) \left((1-\theta_{2,t} - \theta_{3,t}) R_f + \theta_{2,t} \widetilde{R}_{2,t+1} + \theta_{3,t}  \widetilde{R}_{3,t+1}\right).
+\end{equation}
+
+Given an i.i.d. investment set, decisions on $\theta _{3,t}$ and $\alpha_t$ should not be time-varying, such that
+\begin{equation*}
+(\theta_{3,t}, \alpha_t, A_t) = (\theta_3, \alpha, A)
+\end{equation*}
+The problem in Eq. (20) then becomes
+\begin{equation}
+B^*_{t} = \underset {\theta_3}{\max} \left[ (1-\beta)^{1/1-\Gamma} \alpha^{-\Gamma/ 1-\Gamma} [E((\theta' \widetilde{R}_{t+1})^{1-\Gamma})]^{1/(1-\Gamma)}  +  b_0 E ( u(\theta_{3} (\widetilde{R}_{3,t+1} - R_f) )) \right].
+\end{equation}
+
+\citet{Barberis2009} show that with above assumptions, the first order conditions of optimality are the following:
+
+\begin{equation}
+\alpha=1-\beta^{\frac{1}{\Gamma}}R_{f}^{\frac{1-\Gamma}{\Gamma}}e^{\frac{1}%
+	{2}(1-\Gamma)\sigma_{C}^{2}}%
+\end{equation}
+
+\begin{multline}
+0=b_{0}R_{f}\left(  \frac{\beta}{1-\beta}\right)  ^{\frac{1}{1-\Gamma}}\left(
+\frac{1-\alpha}{\alpha}\right)  ^{\frac{-\Gamma}{1-\Gamma}}\left[
+e^{g_{s}+\frac{1}{2}\sigma_{s}^{2}}-R_{f}+(\lambda-1) \left [ e^{g_{s}+\frac
+	{1}{2}\sigma_{s}^{2}}N(\widehat{\varepsilon}-\sigma_{S})-R_{f}N(\widehat
+{\varepsilon})\right]  \right] \\ + e^{g_{S}+\frac{1}{2}\sigma_{S}^{2}%
+	-\Gamma\sigma_{S}\sigma_{C}\omega}-R_{f}%
+\end{multline}
+
+
+\begin{multline}
+0=b_{0}R_{f}\left(  \frac{\beta}{1-\beta}\right)  ^{\frac{1}{1-\Gamma}}\left(
+\frac{1-\alpha}{\alpha}\right)  ^{\frac{-\Gamma}{1-\Gamma}}\theta_{S}\left[
+e^{g_{s}+\frac{1}{2}\sigma_{s}^{2}}-R_{f}+(\lambda-1)
+\left[  e^{g_{s}+\frac
+	{1}{2}\sigma_{s}^{2}}N(\widehat{\varepsilon}-\sigma_{S})-R_{f}N(\widehat
+{\varepsilon})\right]  \right] \\
++\frac{1}{1-\alpha}e^{g_{C}+\frac{1}{2}%
+	\sigma_{C}^{2}-\Gamma\sigma_{C}^{2}}-R_{f}
+\end{multline}
+
+
+In the equilibrium condition, we know that the equity premium is given by
+\begin{equation*}
+EP = E_t (R_{s,t+1}) - r_f,
+\end{equation*}
+where we know that
+\begin{equation*}
+log(R_{S,t+1}) \equiv log(R_{s,t+1} +1)　= g_s + \sigma_s \epsilon_{s,t+1},
+\end{equation*}
+and this is equivalent to
+\begin{equation*}
+R_{S,t+1} = e^{ g_s + \sigma_S \epsilon_{S,t+1}} - 1.
+\end{equation*}
+ 
+Taking the expected values at time \textit{t} on both sides we have:
+\begin{equation*}
+E_t (R_{S,t+1}) = e^{ g_s +  \dfrac{\sigma_S^2}{2}} - 1.
+\end{equation*}
+
+Then the expected equity premium can be given by:
+\begin{equation*}
+EP = (e^{ g_s + \dfrac{\sigma_S^2}{2}} - 1 ) -r_f = e^{ g_s + \dfrac{\sigma_S^2}{2}} - R_f.
+\end{equation*}
+
+\section{Results}
+
+ 
+
+\subsection{Narrow framing in Chinese households}
+
+In this section, we apply the described method  in the Section 3 to estimate the level of narrow framing among Chinese households. We refer the required return and consumption process parameters to the values in Table 3, which are estimated from annual data spanning from 2002-2014. In details, the expected return and standard deviations are obtained based on the CSI 300 index\footnote{The CSI is a capitalization-weighted stock market index designed to replicate the performance of 300 stocks traded in the Shanghai and Shenzhen stock exchanges.}. The data of  consumption growth in China are obtained from the World Bank (World Development Indicators). Finally, following \citet{Barberis2009} and \citet{Giorgi2012}, we set $\beta = 0.98$. Three unknown variables, the risk-free rate, $r_f$, the growth rate of stock returns, $g_s$ and the degree of narrow framing, $b_0$ can be obtained by solving Equations 20-22. 
+
+
+\begin{spacing}{1}
+\begin{table}[H]
+	\renewcommand\arraystretch{1.5}% spacing control inside the table
+	\centering
+	\caption{Chinese economic data for assessing household narrow framing}
+	\begin{tabular}{ccl}
+		\toprule
+		Parameter   & \multicolumn{1}{c}{Value} & \multicolumn{1}{c}{Description} \\
+		\midrule
+		$\beta$       & 0.98       &   time decay coefficient \\
+		%$g_s$ & 0.043      &  mean of log return growth of CSI 300 index \\
+		$g_c$         & 0.079      &   mean of log consumption growth \\
+		$\sigma_c$      & 0.014      &  standard deviation of consumption growth rate\\
+		$\sigma_s$      & 0.53       &   standard deviation  of log return growth of CSI 300 index \\
+		$w_{cs}$       & 0.36       &  correlation between CSI 300 return and consumption growth rate\\
+		\bottomrule
+	\end{tabular}%
+	\label{tab:addlabel}%
+\end{table}%
+\end{spacing}
+
+\begin{spacing}{1}
+\begin{table}[H]
+	\renewcommand\arraystretch{1.5}% spacing control inside the table
+	\centering
+	\caption{Summary statistics for narrow framing}
+	\small
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} cccc}
+		\toprule
+		Variable name  &sub-groups  & \multicolumn{1}{l}{Mean}  & \multicolumn{1}{l}{Median}  & \multicolumn{1}{l}{N} \\
+		\midrule
+		age    
+		        &30-      &0.42	&0.14	&208 \\
+		        &31-40    &0.30	&0.14	&518 \\
+		        &41-50    &0.28	&0.15	&562 \\
+		        &51-60    &0.29	&0.13	&448 \\
+		        &61+	  &0.20	&0.10	&414 \\
+		\midrule
+		education        
+		    &primary             &0.26	&0.13	&364  \\
+		    &high school         &0.28	&0.15	&1165 \\
+		    &graduate school     &0.31	&0.12	&621  \\
+		\midrule
+		gender	
+		&female          &0.31	&0.14 &683 \\        
+		&male            &0.27	&0.13 &1467 \\
+		\midrule    
+		marital status
+		&other       &0.33	&0.13 &411 \\
+		&married     &0.27	&0.14 &1739 \\
+		\midrule    
+		employment
+		&other       &0.24	&0.11	&689  \\
+		&employed    &0.31	&0.15	&1461 \\
+		\midrule    
+		industry
+		&other       &0.29	&0.13	&1945 \\
+		&financial   &0.26	&0.14	&205 \\
+		\midrule 
+		financial literacy(factor score)
+		&lower       &0.29	&0.14	&1016 \\
+		&middle      &0.28	&0.14	&674  \\
+		&higher      &0.28	&0.12	&460  \\
+		\midrule	
+		financial literacy(answer questions)
+		&0 score     &0.29	&0.13	&123 \\
+		&1 score     &0.29	&0.14	&794 \\
+		&2 scores    &0.28	&0.14	&773 \\
+		&3 scores    &0.28	&0.12	&460 \\
+		\midrule
+		houses	   
+		&no          &0.05	&0.03	&144   \\
+		&yes         &0.30	&0.15	&2006  \\
+		\midrule         
+		wealth	
+		&lower     &0.15	&0.09	&717 \\
+		&middle    &0.28	&0.15	&717 \\
+		&higher    &0.43	&0.19	&716 \\
+		\midrule
+		family income
+		&lower     &0.25	&0.13	&717 \\
+		&middle    &0.29	&0.13	&717 \\
+		&higher    &0.32	&0.14	&716 \\
+		\midrule
+		financial wealth 
+		&lower     &0.41	&0.20	&717 \\
+		&middle    &0.25	&0.13	&717 \\
+		&higher    &0.20	&0.09	&716 \\
+	     \bottomrule
+     \end{tabular*}%
+ \end{table}%
+\setcounter{table}{3} % assign the same table number to the next table  
+\begin{table}[H]
+		\renewcommand\arraystretch{1.5}% spacing control inside the table
+		\centering
+		\caption{Summary statistics for narrow framing --- \textit{continued}}
+		\small
+		\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} cccc}
+		\toprule
+		Variable name  &sub-groups  & \multicolumn{1}{l}{Mean}  & \multicolumn{1}{l}{Median} & \multicolumn{1}{l}{N} \\
+		\midrule
+		stock wealth
+		&lower  &0.55	&0.29	&751 \\
+		&middle &0.20	&0.13	&681 \\
+		&higher &0.10	&0.06	&718 \\
+		\midrule
+		region	
+		&east  		&0.32	&0.16	&1548 \\
+		&middle      &0.18	&0.09	&316          \\
+		&weat        &0.21	&0.12	&286          \\
+		\midrule
+		investment 
+		&1-2 years   &0.39	&0.17	&498 \\
+		&3-5 years   &0.30	&0.13	&174 \\
+		&6-10 years  &0.28	&0.14	&690 \\
+		&10+ years   &0.22	&0.12	&788 \\
+		\midrule
+		trust	
+		&credible   &0.31	&0.12	&206  \\
+		&general    &0.30	&0.13	&670  \\
+		&uncredible &0.27	&0.14	&1274 \\
+		\midrule
+		herding
+		&strongest  &0.36	&0.16	&652  \\
+		&general    &0.29	&0.15	&512  \\
+		&mildest    &0.23	&0.11	&986  \\
+		\midrule
+		ambiguity aversion	
+		&no   &0.29	&0.13	&1555 \\
+		&yes  &0.28	&0.14	&595  \\
+		\midrule
+		asset diversity
+		&1 specie         &0.28	&0.12	&788   \\
+		&2-3 species      &0.29	&0.14	&1232  \\
+		&3+ species       &0.23	&0.14	&130   \\
+		\midrule
+		production and management
+		&no  &0.27	&0.14	&1710  \\
+		&yes &0.36	&0.12	&440   \\
+		\midrule
+		risk attitude 
+		&risk appetite  &0.25	&0.11	&737  \\
+		&risk neutral   &0.31	&0.15	&718  \\
+		&risk aversion  &0.30	&0.15	&695  \\
+		\midrule
+    	Total	
+	       &   	    &0.29	&0.13		&2150 \\
+	
+		\bottomrule
+	\end{tabular*}%
+\end{table}%
+\end{spacing}
+A first look at the distribution of narrow framing reveals a substantial amount of variation.Table 4 lists the key statistics under different sub-groups with their mean and median values for $b_0$. In total sample of 2150, We see that the 25\% and 75\% percentiles are xx and xx, respectively.   
+
+ 
+\subsection{Narrow framing and household portfolio under-diversification}
+
+In this section, we focus on the relation between narrow framing and stock under-diversification by controlling a rich set of independent variables that are available in CHFS dataset. Analogous to \citet{Goetzmann2008}, we set the dependent variable equals to the total number of individual stocks in the portfolio as a direct measure of stock diversification. The average size (standard deviations) of Chinese households' stock portfolios $N_s$ is 3.26 (2.32) conditional on the stock participation. Since the data is heavily left-skewed (skewness = 2.71) even after eliminating outliers, we take the form of natural logarithm,  $Ln(N_s)$ for all following regressions. Existing literature recognize that there are many determinants of stock diversification. We consider a wide set of controlling variables that fall into two main sub-groups: a) demographics (e.g., net wealth, total family income, net values of financial assets, age, gender, marriage status, number of children, employment status, education levels, whether works in financial sectors, diversity of asset allocation and financial literacy) b) behavioural preferences (e.g., trust, the tendency of herding,  and ambiguity aversion). Controlling all above characteristics partials out confounding effects between the impact of narrow framing and  households' stock portfolios. Values of net-wealth and financial assets are standardized (divided by one million) to facilitate interpretation.  Variance Inflation Factors (VIF) are checked simultaneously to ensure all controlling variables are free of multicollinearity issues.
+
+
+
+
+Using this framing proxy, we show that investors who execute more clustered trades
+exhibit weaker disposition effects and hold better-diversified portfolios.
+
+
+Table 5 present our main results that investigate the relation between narrow farming and stock diversification. Consistent with our former hypothesis: agents with higher degree of narrow framing are more likely to assess each individual stock independently and so fail to recognize risk reduction opportunities from diversification.  We found that households with higher narrow framing hold fewer number of individual stocks. the coefficient -0.131 is statistically significant at the 1\% level. This result is also in consent with related emprical studies, for example, \citet{Kumar2008} show that investor who execute more clustered trades (as a prxy of narrow framing) hold better-diversified stock portfolios.  
+
+
+applied the degree of clustering in investor’s trades as the main proxy of narrow framing.   
+
+In addition to narrow framing, our results also confirm the relation between diversification and some other behavioural traits suggested by many previous studies. Although \citet{Guiso2008} reported less trusting individuals are more reluctant to hold stocks, conditional on stock participation, how trust can affect households' stock diversification behaviours is still unclear. Our results indicate that trusting households tend to hold more consecrated stock portfolio. However, this tendency is hardly borne out statistically. Similar situation are also found among herding: people who are reluctant to follow others tend to hold more concentrated stock portfolios.  Most interestingly, although our results capture a solid positive relation between ambiguity aversion and stock diversification, its interpretation is not straightforward but depend on whether individual stocks or the overall market is more ambiguous to households. As discussed by previous studies \citep[e.g., ][]{Boyle2012,Dimmock2016},  ambiguity-averse investors who view the overall market as more ambiguous than individual stocks will concentrate on investing a few individual but familiar stocks, resulting an under-diversified portfolio. In contrast,  ambiguity-averse investors who does not view the overall market as ambiguous as individuals stock will hold more diversified portfolios. Since the sample has already ruled out households who do not participate at all (for those who both view individual stocks and overall market as highly ambiguous), if higher ambiguity aversion improves the stock diversification as showed in our study, Chinese households appear to think the overall market less ambiguous than individual stocks. 
+
+On the other side, Table 5  presents associations between stock diversification and households' demographics. In consent with empirical evidence from developed markets, \citep[e.g., ][]{,Vissing-Jorgensen2002,Vissing-Jorgensen2003,Campbell2006,Goetzmann2008,Fuertes2014}, a strong wealth effect are captured among Chinese households: stock portfolios are better diversified among wealthier and higher income families. Surprisingly, neither larger portions of financial assets nor stocks  contribute to stock diversification significantly, which was confirmed by a separate regression as it causes serious multicollinearity problems when we have both net-financial assets and net-stocks as dependent variables.  Also, our findings are in line with those reported in \citet{Dorn2009}, \cite{Fuertes2014} and \citet{Gaudecker2015} suggesting that investor with higher sophistication in knowledge and reasoning (e.g., older in age, higher financial literacy, longer years on investing stocks, live in a more developed area, college degree and higher diversity in financial assets) tend to diversify better. Furthermore, \citet{Goetzmann2008} and \citet{Fuertes2014} argue that the stock under-diversification can be also caused by overconfidence. Although none of our coefficient estimates  for overconfidence proxies are significant, we found that males, married families and households showing less trusting or less degree of herding exhibit poorer diversification possibly as a consequence of overconfidence.     
+
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+	\centering
+	\caption{Narrow framing and stock diversification}
+		\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} ccc}
+		\toprule
+		& coef         & standard errors & p-values \\
+		\midrule
+		 const                   &0.356**	 &0.180	 &0.048 \\
+		 netwealth               &0.018***	 &0.005	 &0.000 \\
+		 total\_income\_imp      &0.031**	 &0.013	 &0.017 \\
+		 trust                   &-0.022	 &0.015	 &0.130 \\
+		 herding                 &-0.010	 &0.012	 &0.400 \\
+		 hhead\_age              &0.003*	 &0.002	 &0.061 \\
+		 hhead\_male             &-0.013	 &0.030	 &0.660 \\
+		 hhead\_married          &-0.037	 &0.035	 &0.285 \\
+		 htotal\_child\_number   &-0.038	 &0.024	 &0.112 \\
+		 dummy\_financial\_job   &0.000	     &0.046	 &0.998 \\
+		 employment\_status      &-0.006	 &0.038	 &0.872 \\
+		 ambiguity aversion      &0.086***	 &0.030	 &0.004 \\
+		 hous\_yes               &-0.073	 &0.054	 &0.179 \\
+		 investment experience   &0.007***	 &0.002	 &0.001 \\
+		 east                    &0.070**	 &0.030	 &0.022 \\
+		 edu\_grp\_3             &0.046	     &0.030	 &0.124 \\
+		 Diversity               &0.075***	 &0.015	 &0.000 \\
+		 financial\_literacy1    &0.050**	 &0.022	 &0.021 \\
+		 financial asset         &-0.011     &0.009	 &0.255 \\
+		 narrow framing          &-0.131***	 &0.023	 &0.000 \\
+		
+		\bottomrule
+	\end{tabular*}%
+	\label{tab:addlabel}%
+	\begin{tablenotes}
+	\small
+	\item Notes: Table 5 reports the OLS regression in which the dependent variables is the natural logarithm of numbers of individual stocks that each household have, respectively.  The model includes a constant term and controls for net-wealth; the natural log of total family income; net values of financial assets; age; gender; marriage status; number of children; employment status;education, whether works in financial sectors; diversity of asset allocation; financial literacy; trust, herding tendency; length of investing stocks, living area and ambiguity aversion. Net-wealth and net values of financial asserts are standardized (divided by one million) to facilitate interpretation. Variance Inflation Factors (VIF) are checked simultaneously to ensure all controlling variables are free of multicollinearity issues. {\tiny*},{\tiny**},{\tiny***} denote significance at the 10\%, 5\%, 1\% levels, respectively.  
+	\end{tablenotes}
+	\label{tab:addlabel}%
+\end{table}%
+
+
+\subsection{Correlates of narrow framing}
+Managing portfolios often involves significant cognitive costs, if narrow framing is mainly driven by intuitive thinking, people who exhibits a stronger narrow framing should hold a less diversified portfolio. According to \citet{Tversky1981}, narrow framing is a reflection of reliance on intuitive thinking against effortful reasoning. While reasoning is deliberate and initiative, intuitive thinking is driven by spontaneous reactions that automatically come to mind. Although the importance of narrow framing in financial decision-making has long been discussed in experimental environment \citep{Tversky1981, Kahneman1983,Anagola2013,Beshears2016}, these theoretical predictions have not been widely verified outside the laboratory. In this section, we fill this gap by exploring the hypothesis that the obtained degree of narrow framing can be, to some extent, characterized by demographics and behavioural preferences that can be implicitly linked to intuitive thinkers among households\footnote{The logic is, for example, males and well-educated people are thought to be more analytical. When making decisions, effortful reasoning could therefore be the stronger side to constrain narrowing framing; on the other hand; wealthy people who usually possess deeper financial knowledge and better accessibility to financial consultants are also less likely to exhibit narrow framing; people who feel confident about their own financial skills(information) may hold very few but familiar stocks}.
+
+A first look at Table 6 reveals a few interesting results. People who have relatively sophisticated mind (e.g., older in age, more confident about their own opinions or less likely to trust others) exhibit lower level of narrow framing. We also found that financial experiences helps to reduce narrow farming as well. For example, households who express a particular interest in finance, have more years of stock investing or live in developed area are all inversely related to narrow framing. Noticeably, our results confirms that decisions on whether buying properties lead a huge impact to narrow framing. As it is well-know that in recent Chinese economics, the irrational growth in real estate price has absorbed excessive capitals from households (our sample shows that, in average, the market values of own properties accounts for X\% of households' total net-wealth). Then, a positive relation between whether having properties and narrow framing might indicate that those households who tend to narrowly frame its stock holdings may also narrowly framing the growth of their owned properties. Putting together with the opposite impact to narrow framing between net-wealth and net-financial wealth, we conjecture that, wealthier households may not necessarily allocate their wealth into financial assets but into houses, betting on the continue growth in the real estate sector. That is why we saw a positive relation between net-wealth and narrow framing. On the other side, households who decide to allocate more wealth to financial assets may naturally get access to better financial advises or possess a richer set of information, resulting a clear negative correlations between narrow framing and financial assets.
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+	\centering
+	\caption{Correlates of of narrow framing}
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} ccc}
+		\toprule
+		& \multicolumn{1}{c}{coef} & \multicolumn{1}{c}{standard errors} & \multicolumn{1}{c}{p-values} \\
+		\midrule
+		const                   &-3.391***	&0.224	&0.000 \\
+		netwealth               &0.091***	&0.008	&0.000 \\
+		interested in finance   &0.070***	&0.024	&0.004 \\
+		trust                   &0.049**	&0.025	&0.050 \\
+		herding                 &-0.067***	&0.020	&0.001 \\
+		hhead\_age              &-0.004*	&0.002	&0.069 \\
+		hhead\_male             &-0.053 	&0.051	&0.292 \\
+		hhead\_married          &-0.042 	&0.058	&0.472 \\
+		dummy\_financial\_job   &-0.035 	&0.079	&0.660 \\
+		employment\_status      &0.073  	&0.064	&0.257 \\
+		ambiguity aversion      &-0.087*    &0.051	&0.091 \\
+		hous\_yes               &1.443***	&0.092	&0.000 \\
+		investment experience   &-0.018***	&0.004	&0.000 \\
+		east                    &0.329***	&0.051	&0.000 \\
+		hhead\_edugrp\_3        &0.002  	&0.050	&0.965 \\
+		financial\_literacy1    &0.008  	&0.037	&0.821 \\
+		fasset                  &-0.232***	&0.016	&0.000 \\
+		
+		\bottomrule
+	\end{tabular*}%
+	\begin{tablenotes}
+		\small
+		\item Notes: Table 6 reports the OLS regression in which the dependent variables indicate the level of narrow framing. The model includes a constant term and controls for net-wealth; the natural log of total family income; net values of stocks; net values of financial assets; age; gender; marriage status; number of children; employment status;education, whether works in financial sectors; diversity of asset allocation; financial literacy; trust, herding tendency; degree of overconfidence and ambiguity aversion.Net-wealth and net values of financial asserts are standardized (divided by one million) to facilitate interpretation. Variance Inflation Factors (VIF) are checked simultaneously to ensure all controlling variables are free of multicollinearity issues. {\tiny*},{\tiny**},{\tiny***} denote significance at the 10\%, 5\%, 1\% levels, respectively.
+	\end{tablenotes}
+	\label{tab:addlabel}%
+\end{table}%
+
+In summary, our regression results show that the narrow framing is an important determinant of investors's equity portfolio choices. This evidence not only reinforce the theoretical predictions on narrow framing \citep[e.g., ][]{Kahneman1983,Barberis2009} but also confirm that the empirical findings of \cite{Kumar2008} from different measurements and markets.    
+
+\section{Robustness Test}
+
+Because the original BH approach is a homogeneous agent model, in taking that approach, our analysis heavily relies on an assumption that the prediction of the BH model is qualitatively similar to the predictions of those heterogeneous agent models\footnote{As argued in \cite{Barberis2009}, if narrow framing affects the equity premium in a homogeneous agent model, it is likely to also affect the equity premium in a heterogeneous agent model: since the aggregate stock market does not have a close substitute, it would be too risky for expected utility investors to trade aggressively against the narrow framers. The narrow framers would therefore continue to have at least some impact on the equity premium.}. That is why, in this section, we conduct a series of robustness tests to verify this.  Although in the full sample it is evident that narrow framing confounds Chinese households to diverse well, we are keen to know if such a relation is persistent when the full sample is re-grouped by many different heterogeneities.
+
+\subsection{Can the impact of narrow framing be mitigated by better knowledge and education?}
+
+Although the idea of diversification is essential in risk management, presumably, it is still unfamiliar to general populations. As confirmed by many recent studies, rather than general education levels,  knowledge in finance appears to be a more important factor for increasing the odd that an investor will seek the benefits of diversification \citep[e.g., ][]{Hibbert2012,Fuertes2014,Balloch2014}. We conjecture that, when making portfolio decisions, individuals who are more knowledgeable in finance are less likely being affected by narrow farming. We use two measures as the proxy of finance knowledge: a) degree of interest in finance, ranging from 1 to 5. ``1" means most interested and ``5" stands for most less interested; b) a dummy variable, whether attend any finance class. We then separately investigate the impact of finance knowledge within five subgroups: households with high finance knowledge (households who reported the highest interest level in finance or have attended finance class); households with low finance knowledge (households who did not report the highest interest level in finance or attendance of any finance class) and households who expressed the highest interest in finance and also have attended finance class. 
+
+Table 7 reports the regression results based on above criterion. Nevertheless, we cannot fail to notice that the negative associations between narrow framing and stock diversification are all significant with our two measures of finance knowledge. However, for rows (1) and (3), the standard errors are larger than those of rows (2) and (4), indicating that higher finance knowledge (whether proxied as the greatest interest in finance or have attended finance class) may still help to mitigate the affect of narrow farming. This can be further supported by the results in row (5), where the negative impact of narrow framing becomes insignificant when we regress on the overlapped samples from row (1) and (3). In summary, results in Table 7 suggest that narrow framing is a persistent bias among portfolio decision-making, even for those households who possess moderate knowledge in finance. However, for those households who possess strong finance knowledge, their portfolios diversification are resistant to the impact of narrow farming. 
+
+
+\begin{table}[H]
+	\centering
+	\caption{Narrow framing and knowledge in finance}
+		\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} cccc}
+		\toprule
+		& \multicolumn{1}{l}{coefficient} & \multicolumn{1}{l}{standard  error} & \multicolumn{1}{l}{N} \\
+		\midrule
+		Interested in finance &            &            &  \\
+		\midrule
+		(1) \ High finance knowledge  & -0.445***    & 0.139      & 275 \\
+		(2) \ Low finance knowledge & -0.121***    & 0.024      & 1875 \\
+		\midrule
+		Finance class &            &            &  \\
+		\midrule
+		(3) \ High finance knowledge & -0.186***    & 0.058      & 534 \\
+		(4) \ Low finance knowledge  & -0.125***    & 0.026      & 1616 \\
+		\midrule
+		(5) \ Both       & -0.243    & 0.245      & 118 \\
+		(6) \ No interaction  & -0.131***     & 0.023      & 2150 \\
+		\bottomrule
+	\end{tabular*}%
+	\begin{tablenotes}
+	\small
+		\item Notes: Table 7 reports the OLS regression in which the dependent variables is the natural logarithm of numbers of individual stocks that each household have, respectively. The model includes a constant term and controls for net-wealth; the natural log of total family income; net values of financial assets; age; gender; marriage status; number of children; employment status;education, whether works in financial sectors; diversity of asset allocation; financial literacy; trust, herding tendency; length of investing stocks, living area and ambiguity aversion. Net-wealth and net values of financial asserts are standardized (divided by one million) to facilitate interpretation. Variance Inflation Factors (VIF) are checked simultaneously to ensure all controlling variables are free of multicollinearity issues. The full sample is divided into five subgroups: households with high finance knowledge (households who reported the highest interest level in finance or have attended finance class); households with low finance knowledge (households who did not report the highest interest level in finance or attendance of any finance class). The row "Both" represents households who are not only expressed the highest interest in finance but also have attended finance class. Finally, the row "No interaction" provides the regression results with no treatments on the sample.  {\tiny*},{\tiny**},{\tiny***} denote significance at the 10\%, 5\%, 1\% levels, respectively.  
+    \end{tablenotes}
+	\label{tab:addlabel}%
+\end{table}%
+
+
+\subsection{Narrow framing and overconfidence}
+
+In another line of  literature, poor portfolio diversification is related to overconfidence in the sense that overconfident investors are prone to engage higher risks \citep{Barber2001,Fuertes2014}. {\color{red}(more references)} This leads naturally to expect that overconfidence also exaggerates the impact of narrow framing: an overconfident investor may further leverage the risky assets he is framing narrowly. Therefore, the negative association between stock diversification and narrow farming would be more statistically evident among overconfident households than less overconfident households. In this section, we test this conjecture by choosing different proxies of overconfidence.  Empirical evidence suggest that men, married people and more experienced professionals exhibit higher levels of overconfidence than women, single people and newcomers, respectively  \citep[e.g., ][]{GRINBLATT2009,GRINBLATT2011} {\color{red}(more references, especially for professionals are more confident than new comers)}. Inspired by this finding,  we restructure the full sample into high (low) overconfidence groups based on above three measures: gender, marriage status and experience of stock investments. 
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[H]
+	\centering
+	\caption{Narrow framing and overconfidence}
+		\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} cccc}
+		\toprule
+		& \multicolumn{1}{l}{coe} & \multicolumn{1}{l}{std err} & \multicolumn{1}{l}{N} \\
+		\midrule
+		Stock investment length (year) &            &            &  \\
+		\midrule
+		(1)\  High overconfidence (Stock investment length $>$ 6) & -0.219***    & 0.041      & 1399 \\
+		(2) \ Low overconfidence (Stock investment length $<$ 3) & -0.036    & 0.032      & 498 \\
+		\midrule
+		Gender     &            &            &  \\
+		\midrule
+		(3)\  High overconfidence (Men) & -0.130***    & 0.029      & 1467 \\
+		(4)\  Low overconfidence (Women) & -0.141***    & 0.041      & 683 \\
+		\midrule
+		Marriage status &            &            &  \\
+		\midrule
+		(5)\  High overconfidence (Married) & -0.193***     & 0.033      & 1739 \\
+		(6)\  Low overconfidence (Single) & -0.088***     & 0.035      & 411 \\
+		\midrule
+		Both       &            &            &  \\
+		(7)\ low overconfidence ( Stock investment length $<$ 3 \& Wonmen  ) & -0.005    & 0.069      & 153 \\
+		(8)\ low overconfidence ( Stock investment length $<$ 3 \& Single  ) & 0.016     & 0.044      & 106 \\
+		(9)\ low overconfidence ( Women \& Married  ) & -0.146    & 0.089      & 139 \\
+		(10)\ No interaction & -0.135***    & 0.023      & 2150 \\
+		\bottomrule
+	\end{tabular*}%
+	\label{tab:addlabel}%
+		\begin{tablenotes}
+		\small
+		\item Notes: Table 8 reports the OLS regression in which the dependent variables is the natural logarithm of numbers of individual stocks that each household have, respectively. The model includes a constant term and controls for net-wealth; the natural log of total family income; net values of financial assets; age; number of children; employment status;education, whether works in financial sectors; diversity of asset allocation; financial literacy; trust, herding tendency; living area and ambiguity aversion. Net-wealth and net values of financial asserts are standardized (divided by one million) to facilitate interpretation. Variance Inflation Factors (VIF) are checked simultaneously to ensure all controlling variables are free of multicollinearity issues. The full sample is divided into subgroups with various of measures of overconfidence: male respondents, married respondents and  households who have longer years of stock investing are allocated to higher overconfidence groups. The row "Both" represents overlapped households who meet at least two measures out of three. Since very a few households meet all of these three measures, we do not report the results when three measures are considered. {\tiny*},{\tiny**},{\tiny***} denote significance at the 10\%, 5\%, 1\% levels, respectively.  
+	\end{tablenotes}
+\end{table}%
+
+As can be seen from the Table 8, in consent to what we found in previous sections, narrow framing still reduces the level of diversification among most of sub-groups, however, this impact becomes weaker among low overconfidence groups. Particularly, in row (2). the negative association is insignificant for households who have less-experienced in stock investing. Moreover, when we combine any two of the three overconfidence measures, all resulting sub-groups' diversification levels are no longer significantly correlated to narrow framing\footnote{We did not report the results for households who pass all three measures as its very limited sample size.}. In summary, results in the Table 8 support the view that overconfident households often diversify poorly because their overconfidence make them  more vulnerable to the impact of narrow framing. On the other sides, results from rows (7)-(8) demonstrated that then impact of narrow framing may become very minor to people who are conservative in investing. 
+\newpage
+
+
+
+
+
+
+
+Goetzman and Kumar (2008) use age and income as two key variables to proxy investor sophistication. They report that younger and lower income individuals hold less-diversiﬁed portfolios. We would expect younger investors to have low information-processing ability due to lack of experience. Low-income investors are unlikely to pay for financial advice and information,
+
+We hypothesize that poor portfolio diversification is related to overconfidence 
+ 
+ men are less diversiﬁed than women, and married people are better diversiﬁed than singles. However, recent evidence for the Finnish stock market conveys a slightly different message: Grinblatt and Keloharju (2009) report that married Finnish investors have higher number of trades and higher portfolio turnover indicating overconﬁdence. Likewise, Grinblatt, Keloharju, and Linnainmaa (2011) document that married Finnish investors tend to be less diversiﬁed ceteris paribus.
+
+
+
+proxy of overconfidence
+
+
+
+An additional point to keep in mind is that my analysis has not included the costs associated with portfolio turnover
+
+prepare no interaction and interactions between narrow framing and ambiguity aversion
+
+regressions are not consistent if you refine samples
+
+women and married people are less confidence and have higher risk aversion
+
+We have not, as yet, found a tractable way of analyzing a heterogeneous agent model of this kind. As in other lines of
+asset pricing research, then, we start by studying a homogeneous agent model. In taking this approach, we are careful to
+pick an application where the prediction of the homogeneous agent model is likely to be qualitatively similar to the
+prediction of the more realistic heterogeneous agent model. That is why, in this section, we choose the equity premium as
+our application. 
+\subsection{Ambiguity aversion}
+
+While some authors argue that ambiguity aversion can account for stock diversification,   we argue that narrow framing is an irreplaceable ingredient to rationalize portfolio under-diversification. Viewed from their origin, both loss and ambiguity aversion are key ingredients to form people's  risk attitude. However, they focus only on the one specific prospect whereas narrow framing describes perhaps a more realistic way of how people merge risk in different aspects. In other words, we argue that neither loss aversion nor ambiguity aversion is sufficient to replace the role of narrowing framing that inhibits one from taking advantage of diversification opportunities\footnote{To see experimental evidence about this, for example, \citet{Anagola2013} investigate if the way of presenting investment results can alter risk taking behaviours. They observe that subjects who are encouraged to use the narrower stock-level framing, rather than the portfolio-level, will take less overall risk.}.
+
+Viewed from their actual effect, investors become more risk-sensitive if they are more loss or ambiguity averse. Then they should be stronger motivated in seeking further risk reduction. In theory, diversification is the most applicable, and almost costless way of risk reduction. In this sense, we expect loss or ambiguity aversion to improve portfolio diversification, rather than an opposite relationship suggested by previous studies.
+
+The positive relation that we find implies that, in aggregate, investors perceive that the returns of individual stocks have greater ambiguity than the returns of the over-all market.
+
+\subsection{Trust and financial literacy}
+\subsection{Knowledge or cognitive ability}
+Financial literacy is a cause of narrow framing.
+\section{Conclusion}
+Our work provide a more comprehensive understanding of narrow framing
+we try to shed the light on how the narrow framing affect the perception of financial risk when household are managing their assets.
+
+\newpage
+% control sapcing among references
+\setlength{\bibsep}{0pt plus 1.5ex}
+\bibliography{Relib}
+\bibliographystyle{apalike}
+%\end{spacing}
+
+\end{document}

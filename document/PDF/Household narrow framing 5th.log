@@ -1,0 +1,464 @@
+This is LuaTeX, Version 1.0.0 (MiKTeX 2.9.6100 64-bit)  (format=lualatex 2017.4.25)  8 AUG 2017 10:27
+ restricted system commands enabled.
+**"Household narrow framing 5th.tex"
+("./Household narrow framing 5th.tex"
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 1 language(s) loaded.
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty"
+Package: amsmath 2016/06/28 v2.15d AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen103
+))
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks16
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks17
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/endnotes/endnotes.sty"
+\c@endnote=\count99
+\endnotesep=\dimen112
+\@enotes=\write3
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: luatex.def on input line 147.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/luatex.def"
+File: luatex.def 2016/08/17 v0.01g Graphics/Color for luaTeX
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count100
+))
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty"
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 99.
+)
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count101
+\Gm@cntv=\count102
+\c@Gm@tempcnt=\count103
+\Gm@bindingoffset=\dimen115
+\Gm@wd@mp=\dimen116
+\Gm@odd@mp=\dimen117
+\Gm@even@mp=\dimen118
+\Gm@layoutwidth=\dimen119
+\Gm@layoutheight=\dimen120
+\Gm@layouthoffset=\dimen121
+\Gm@layoutvoffset=\dimen122
+\Gm@dimlist=\toks21
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.cfg"))
+("C:/Program Files/MiKTeX 2.9/tex/latex/setspace/setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/float/float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count104
+\float@exts=\toks22
+\float@box=\box28
+\@float@everytoks=\toks23
+\@floatcapt=\box29
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/natbib/natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count105
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/multirow/multirow.sty"
+Package: multirow 2016/10/11 v2.1 Span multiple rows of a table
+\multirow@colwidth=\skip48
+\multirow@cnta=\count106
+\multirow@cntb=\count107
+\multirow@dima=\skip49
+\bigstrutjot=\dimen123
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/booktabs/booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen124
+\lightrulewidth=\dimen125
+\cmidrulewidth=\dimen126
+\belowrulesep=\dimen127
+\belowbottomsep=\dimen128
+\aboverulesep=\dimen129
+\abovetopsep=\dimen130
+\cmidrulesep=\dimen131
+\cmidrulekern=\dimen132
+\defaultaddspace=\dimen133
+\@cmidla=\count108
+\@cmidlb=\count109
+\@aboverulesep=\dimen134
+\@belowrulesep=\dimen135
+\@thisruleclass=\count110
+\@lastruleclass=\count111
+\@thisrulewidth=\dimen136
+)
+("C:/Program Files/MiKTeX 2.9/tex/latex/tools/array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen137
+\extrarowheight=\dimen138
+\NC@list=\toks24
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+\c@definition=\count112
+\c@remark=\count113
+\c@theorem=\count114
+\c@example=\count115
+\c@proof=\count116
+\c@proposition=\count117
+\c@corollary=\count118
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/threeparttable/threeparttable.sty"
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box30
+)
+
+LaTeX Warning: Unused global option(s):
+    [ukenglish,nottitlepage,thmsb].
+
+("./Household narrow framing 5th.aux"
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+
+LaTeX Warning: Label `tab:addlabel' multiply defined.
+
+)
+\openout1 = Household narrow framing 5th.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+ ("C:/Program Files/MiKTeX 2.9/tex/context/base/supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count119
+\scratchdimen=\dimen139
+\scratchbox=\box31
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen140
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks26
+) ("C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+))))
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO)
+
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+
+("C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/luatex-loader.sty"
+Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
+
+(C:/Program Files/MiKTeX 2.9/scripts/oberdiek/oberdiek.luatex.lua))
+\pdftexcmds@toks=\toks27
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
+8.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(60.88887pt, 492.51726pt, 60.88887pt)
+* v-part:(T,H,B)=(72.2698pt, 650.43037pt, 72.2698pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=492.51726pt
+* \textheight=650.43037pt
+* \oddsidemargin=-11.38112pt
+* \evensidemargin=-11.38112pt
+* \topmargin=-37.00018pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 55.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/base/omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 54--67
+[]$[]$ 
+ []
+
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
+[1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [1
+
+] [2] [3
+Missing character: There is no ﬁ (U+FB01) in font cmr10!
+] [4]
+Overfull \hbox (0.9532pt too wide) in paragraph at lines 112--143
+ [][] 
+ []
+
+[5]
+Overfull \vbox (9.50073pt too high) has occurred while \output is active []
+
+
+[6
+Missing character: There is no ’ (U+2019) in font cmr10!
+] [7] [8] [9] [10]
+Overfull \hbox (19.748pt too wide) detected at line 273
+[] []
+ []
+
+[11] [12]
+Missing character: There is no 　 (U+3000) in font cmr10!
+Missing character: There is no 　 (U+3000) in font cmr10!
+ [13] [14] [15]
+Overfull \vbox (72.97827pt too high) has occurred while \output is active []
+
+
+[16] [17] [18] [19
+Missing character: There is no ’ (U+2019) in font cmr10!
+] [20]
+Overfull \vbox (147.64732pt too high) has occurred while \output is active []
+
+
+[21] [22] [23]
+Overfull \vbox (66.04733pt too high) has occurred while \output is active []
+
+
+[24] [25] [26] [27] [28]
+Overfull \vbox (113.43388pt too high) has occurred while \output is active []
+
+
+[29] [30] [31
+Missing character: There is no ﬁ (U+FB01) in font cmr10!
+Missing character: There is no ﬁ (U+FB01) in font cmr10!
+Missing character: There is no ﬁ (U+FB01) in font cmr10!
+Missing character: There is no ﬁ (U+FB01) in font cmr10!
+Missing character: There is no ﬁ (U+FB01) in font cmr10!
+] [32] [33] ("./Household narrow framing 5th.bbl" [34] [35]
+[36
+Missing character: There is no – (U+2013) in font cmr10!
+]) [37] ("./Household narrow framing 5th.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+)
+
+Here is how much of LuaTeX's memory you used:
+ 3833 strings out of 495094
+ 100000,128383 words of node,token memory allocated
+ 3498 words of node memory still in use:
+   5 hlist, 2 vlist, 2 rule, 446 glue, 1 kern, 45 glue_spec, 1 write nodes
+   avail lists: 1:1,2:25,3:145,4:32,5:260,6:3651,7:1812,8:132,9:446,10:20,11:386
+
+ 7103 multiletter control sequences out of 65536+200000
+ 79 fonts using 3277115 bytes
+ 38i,13n,26p,2153b,353s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmti10.pfb>
+Output written on Household narrow framing 5th.pdf (38 pages, 289532 bytes).
+
+PDF statistics: 181 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+
